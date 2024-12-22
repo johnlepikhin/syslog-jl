@@ -2,7 +2,7 @@
 //!
 //! ```
 //! extern crate slog;
-//! extern crate slog_syslog;
+//! extern crate slog_syslog_jl;
 //!
 //! use slog::*;
 //! use slog_syslog::Facility;
