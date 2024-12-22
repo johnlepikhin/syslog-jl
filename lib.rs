@@ -96,40 +96,8 @@ pub struct Streamer3164 {
     level: Level,
 }
 
-#[cfg(debug_assertions)]
 fn get_default_level() -> Level {
-    if cfg!(feature = "max_level_trace") {
-        Level::Trace
-    } else if cfg!(feature = "max_level_debug") {
-        Level::Debug
-    } else if cfg!(feature = "max_level_info") {
-        Level::Info
-    } else if cfg!(feature = "max_level_warn") {
-        Level::Warning
-    } else if cfg!(feature = "max_level_error") {
-        Level::Error
-    } else {
-        // max_level_off
-        Level::Critical
-    }
-}
-
-#[cfg(not(debug_assertions))]
-fn get_default_level() -> Level {
-    if cfg!(feature = "release_max_level_trace") {
-        Level::Trace
-    } else if cfg!(feature = "release_max_level_debug") {
-        Level::Debug
-    } else if cfg!(feature = "release_max_level_info") {
-        Level::Info
-    } else if cfg!(feature = "release_max_level_warn") {
-        Level::Warning
-    } else if cfg!(feature = "release_max_level_error") {
-        Level::Error
-    } else {
-        // release_max_level_off
-        Level::Critical
-    }
+    Level::Info
 }
 
 impl Streamer3164 {
